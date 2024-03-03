@@ -1,0 +1,27 @@
+[project]
+name = "dagger_module"
+version = "0.1.0"
+description = "Dagger module - Lambda Function"
+authors = [
+    {name = "Adrian Jimenez", email ="ajimenezh.94@gmail.com"},
+]
+dependencies = [
+    "dagger-io",
+    "boto3",
+    "bump2version",
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}
+readme = "README.md"
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "ruff",
+]
+
+[tool.setuptools]
+package-dir = {"dagger_module" = "src/dagger_module"}
+
+[project.scripts]
+container-image= "dagger_module.container_image.main:handler"

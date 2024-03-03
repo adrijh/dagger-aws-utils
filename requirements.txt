@@ -1,0 +1,3 @@
+-e ./dagger/
+-e ./src/with-dockerfile
+-e ./src/without-dockerfile
